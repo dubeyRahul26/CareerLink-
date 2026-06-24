@@ -10,6 +10,7 @@ import helmet from "helmet";
 // Routes
 import authRoutes from "./routes/auth.routes.js";
 import registryRoutes from "./routes/registry.routes.js";
+import jobRoutes from './routes/job.routes.js'
 
 
 
@@ -32,6 +33,7 @@ app.get("/api/health", (req, res) => {
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/registry", registryRoutes);
+app.use("/api/jobs", jobRoutes);
 
 const startServer = async () => {
   try {
